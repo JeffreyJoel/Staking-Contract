@@ -5,11 +5,11 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
-contract StakingToken is ERC20, Ownable, ERC20Permit {
+contract RewardToken is ERC20, Ownable, ERC20Permit {
     constructor(address initialOwner)
-        ERC20("StakingToken", "STK")
+        ERC20("RewardToken", "RTK")
         Ownable(initialOwner)
-        ERC20Permit("StakingToken")
+        ERC20Permit("RewardToken")
     {
         _mint(initialOwner, 100000 * 10 ** 18);
     }
